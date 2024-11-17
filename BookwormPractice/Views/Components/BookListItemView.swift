@@ -10,6 +10,7 @@ struct BookListItemView: View {
             VStack(alignment: .leading) {
                 Text(book.title)
                     .font(.headline)
+                    .foregroundStyle(book.rating > 1 ? .black : .red)
                 Text(book.authorName)
                     .font(.body)
                     .foregroundStyle(.secondary)

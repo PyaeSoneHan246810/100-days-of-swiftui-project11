@@ -47,6 +47,11 @@ struct BookDetailsScreenView: View {
                     labelFont: .headline
                 ).frame(maxWidth: .infinity, alignment: .center)
                     .padding(.horizontal, 20)
+                VStack {
+                    Text(book.date.formatted(date: .abbreviated, time: .omitted))
+                        .font(.callout)
+                }.frame(maxWidth: .infinity, alignment: .trailing)
+                    .padding(.horizontal, 20)
             }
         }.scrollBounceBehavior(.basedOnSize)
             .navigationTitle(book.title)
